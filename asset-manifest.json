@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/card-manage-app/static/css/main.0397b080.chunk.css",
+    "main.js": "/card-manage-app/static/js/main.7143de9f.chunk.js",
+    "main.js.map": "/card-manage-app/static/js/main.7143de9f.chunk.js.map",
+    "runtime-main.js": "/card-manage-app/static/js/runtime-main.7e9a6cba.js",
+    "runtime-main.js.map": "/card-manage-app/static/js/runtime-main.7e9a6cba.js.map",
+    "static/js/2.faeb868c.chunk.js": "/card-manage-app/static/js/2.faeb868c.chunk.js",
+    "static/js/2.faeb868c.chunk.js.map": "/card-manage-app/static/js/2.faeb868c.chunk.js.map",
+    "index.html": "/card-manage-app/index.html",
+    "precache-manifest.2a15706cd6ac9cc6928cc51d63884d91.js": "/card-manage-app/precache-manifest.2a15706cd6ac9cc6928cc51d63884d91.js",
+    "service-worker.js": "/card-manage-app/service-worker.js",
+    "static/css/main.0397b080.chunk.css.map": "/card-manage-app/static/css/main.0397b080.chunk.css.map",
+    "static/js/2.faeb868c.chunk.js.LICENSE.txt": "/card-manage-app/static/js/2.faeb868c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7e9a6cba.js",
+    "static/js/2.faeb868c.chunk.js",
+    "static/css/main.0397b080.chunk.css",
+    "static/js/main.7143de9f.chunk.js"
+  ]
+}
