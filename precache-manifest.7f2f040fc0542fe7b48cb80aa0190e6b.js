@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0600bd10c8fe29536cb2dfafc2a45f38",
+    "revision": "30515d9363f471bff0c5c9cb0605a75d",
     "url": "/card-manage-app/index.html"
   },
   {
-    "revision": "cebeeb77d7bcc28dc512",
+    "revision": "3cf23df59b279472fffd",
     "url": "/card-manage-app/static/css/main.0397b080.chunk.css"
   },
   {
-    "revision": "715f83593a3f34955c3c",
-    "url": "/card-manage-app/static/js/2.faeb868c.chunk.js"
+    "revision": "a7e0c4e4d17a91c8b539",
+    "url": "/card-manage-app/static/js/2.bf0d3829.chunk.js"
   },
   {
     "revision": "89ea5e0ed13930f7b9c9c2f392e27cfe",
-    "url": "/card-manage-app/static/js/2.faeb868c.chunk.js.LICENSE.txt"
+    "url": "/card-manage-app/static/js/2.bf0d3829.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cebeeb77d7bcc28dc512",
-    "url": "/card-manage-app/static/js/main.7143de9f.chunk.js"
+    "revision": "3cf23df59b279472fffd",
+    "url": "/card-manage-app/static/js/main.b696d935.chunk.js"
   },
   {
     "revision": "f3e7e2aeef9aad0d2002",
