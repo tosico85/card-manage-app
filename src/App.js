@@ -36,15 +36,50 @@ class App extends React.Component {
 				},
 			],
 		}; */
-		const { cardList } = await axios.get(
-			"https://cardlist-manage.herokuapp.com/cards"
-		);
-		console.log(cardList);
-		this.setState({ isLoading: false, cardList });
+		//"https://cardlist-manage.herokuapp.com/data/cardlist.json"
+		let {
+			data: { cardlist },
+			//} = await axios.get("http://localhost:3001/cards/list");
+		} = await axios.get("https://cardlist-manage.herokuapp.com/cards/list");
+
+		console.log(cardlist);
+		cardlist = cardlist || [];
+		this.setState({ isLoading: false, cardList: cardlist });
 	}
 
 	componentDidMount() {
 		this.getCardList();
+	}
+
+	handleChageBalance(cardInfo, index) {
+		let card = this.state.cardList.concat();
+		card[index] = cardInfo;
+		console.log(card);
+		this.refreshData(card);
+	}
+
+	addCard(cardInfo) {
+		let cardlist = this.state.cardList.concat();
+		cardlist.push(cardInfo);
+		this.refreshData(cardlist);
+		//console.log(cardlist);
+	}
+
+	deleteCard(index) {
+		let cardlist = this.state.cardList.concat();
+		cardlist.splice(index, 1);
+		this.refreshData(cardlist);
+	}
+
+	async refreshData(cardList) {
+		await axios({
+			method: "post",
+			url: "https://cardlist-manage.herokuapp.com/cards/update",
+			//url: "http://localhost:3001/cards/update",
+			data: { cardlist: cardList },
+		}).then((result) => {
+			this.setState({ cardList });
+		});
 	}
 
 	render() {
@@ -61,7 +96,7 @@ class App extends React.Component {
 					<div className="App">
 						<ButtonAppBar />
 						<div className="card-list">
-							{cardList.map((cardInfo, index) => {
+							{Array.from(cardList).map((cardInfo, index) => {
 								console.log(cardInfo, index);
 								return (
 									<CardInfo
@@ -71,10 +106,15 @@ class App extends React.Component {
 										balance={cardInfo.balance}
 										total={cardInfo.total}
 										color={cardInfo.color}
+										onChangeBalance={(cardInfo) => {
+											this.handleChageBalance(cardInfo, index);
+										}}
+										onDeleteCard={() => this.deleteCard(index)}
 									/>
 								);
 							})}
-							<ButtonAddCard />
+
+							<ButtonAddCard onAddCard={(cardInfo) => this.addCard(cardInfo)} />
 						</div>
 					</div>
 				)}

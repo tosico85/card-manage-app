@@ -17,9 +17,18 @@ code {
 }
 
 html,
-.container {
+body,
+.container,
+#root {
 	height: 100%;
 	background-color: #f2f2f2;
+}
+
+.loading-bar {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .card-list {
@@ -41,17 +50,52 @@ html,
 	padding: 20px;
 }
 
-.card_add_button {
-	display: flex;
+.card_add_content {
 	height: 200px;
 	width: 85%;
 	margin-top: 20px;
+	border-radius: 10px;
+	padding: 0px;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card_add_button {
+	display: flex;
+	height: 100%;
+	width: 100%;
 	border: 1px dashed #d2d2d2;
 	border-radius: 10px;
 	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-	padding: 20px;
 	align-items: center;
 	justify-content: center;
+}
+
+.card_input_content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.card-input-box {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.card-input-box h4 {
+	all: unset;
+	vertical-align: center;
+	width: 80px;
+	height: 20px;
+}
+
+.card-input-box input {
+	flex-grow: 1;
+	height: 30px;
 }
 
 .card_add_button:hover {
@@ -72,9 +116,15 @@ html,
 	margin-top: 10px;
 }
 
-.modify_card_info {
+.modify_card_info,
+.insert_card_info {
 	display: flex;
 	justify-content: flex-end;
+}
+
+.input-form {
+	display: flex;
+	align-items: center;
 }
 
 .card_info * {
